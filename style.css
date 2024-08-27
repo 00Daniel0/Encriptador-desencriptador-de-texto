@@ -1,0 +1,247 @@
+
+:root {
+    --color-primario: #0A3871;
+    --color-secundario: #e8e8e8;
+    --color-terciario: #000000;
+    --color-hover: #9b9797;
+}
+
+* {
+    padding: 0;
+    margin:0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box; /* Aplicamos box-sizing globalmente */
+}
+
+body{
+    background-color: var(--color-secundario);
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    height: auto;
+}
+
+
+.seccion_01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    padding-left: 10%;
+    
+}
+
+.presentacion_texto {
+    width: 100%;
+    max-width: 1080px;
+    margin-bottom: 20px;
+}
+
+.area_texto {
+    width: 100%;
+    height: 300px;
+    border: none;
+    background-color: var(--color-secundario);
+    cursor: pointer;
+    color: var(--color-primario);
+    font-size: 32px;
+    font-weight: 400;
+    padding: 20px;
+    resize: none;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
+}
+
+.area_texto::placeholder {
+    color: var(--color-primario);
+}
+
+.area_texto::-moz-placeholder { /* Firefox 19+ */
+    color: var(--color-primario);
+    opacity: 1;
+}
+
+.alerta {
+    display: flex;
+    justify-content: left;
+    color: var(--color-hover);
+    margin-bottom: 20px;
+    width: 300px;
+    
+}
+
+.presentacion_botones {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.boton_encriptar, .boton_desencriptar {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.boton_encriptar {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: none;
+
+}
+
+.boton_desencriptar {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    
+}
+
+.boton_encriptar:hover, .boton_desencriptar:hover {
+    background-color: var(--color-hover);
+    color: var(--color-primario);
+}
+
+.seccion_02 {
+    margin-right: 10%;
+    background-color: var(--color-secundario);
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
+    width: 300px;
+    height: 450px;
+    
+}
+
+.presentacion_ima {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    height: 200px;
+} 
+
+.presentacion_parrafo {
+    padding: 20px;
+}
+
+.presentacion_h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-hover);
+}
+
+.presentacion_p {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: var(--color-hover);
+    padding-top: 20px;
+}
+
+.presentacion_resultado{
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.texto_resultado {
+    color: var(--color-hover);
+    font-size: 25px;
+}
+
+.presentacion_copiar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.boton_copiar {
+    width: 128px;
+    height: 50px;
+    border-radius: 24px;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid var(--color-primario);
+    cursor: pointer;
+}
+
+.ocultar {
+    display: none;
+} 
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-secundario); 
+}
+
+footer div a {
+    color: var(--color-primario); 
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer div a:hover {
+    color: var(--color-hover);
+}
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion_01, .seccion_02 {
+        width: 100%;
+    }
+
+    .area_texto {
+        font-size: 24px;
+        height: 150px;
+    }
+
+    .boton_encriptar, .boton_desencriptar, .boton_copiar {
+        width: 100%;
+        max-width: 328px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('/ima.encrip/blue\ technology.jpg');
+    background-size: cover;
+    background-position: center;
+}
